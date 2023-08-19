@@ -9,8 +9,13 @@ export default function MyApp({ Component, pageProps }: AppPropsWithLayout) {
     <>
       <NextSeo
         titleTemplate={'%2 | Next microCMS Practice'}
-        defaultTitle={'NeNext microCMS Practice'}
+        defaultTitle={'Next microCMS Practice'}
       />
+      {/* {process.env.DEPLOY_ENV === 'production' && (
+        <GoogleTagManager
+          googleTagManagerId={googleTagManagerId as GoogleTagManagerId}
+        />
+      )} */}
       {getLayout(<Component {...pageProps} />)}
     </>
   )
